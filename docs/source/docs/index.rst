@@ -30,6 +30,20 @@ Welcome to SkyPilot!
 
 SkyPilot is a framework for running AI and batch workloads on any infra, offering unified execution, high cost savings, and high GPU availability.
 
+.. .. image:: ../images/skypilot-abstractions.png
+..     :width: 400px
+..     :align: center
+
+.. .. raw:: html
+
+..    <p align="center">
+..    <picture>
+..       <img alt="SkyPilot overview" src="https://i.imgur.com/HkSJXSG.png" width=400px>
+..    </picture>
+..    </p>
+
+
+
 SkyPilot **abstracts away infra burdens**:
 
 - Launch :ref:`dev clusters <dev-cluster>`, :ref:`jobs <managed-jobs>`, and :ref:`serving <sky-serve>` on any infra
@@ -47,6 +61,7 @@ SkyPilot **cuts your cloud costs & maximizes GPU availability**:
 * :ref:`Optimizer <auto-failover>`: 2x cost savings by auto-picking the cheapest & most available infra
 
 SkyPilot supports your existing GPU, TPU, and CPU workloads, with no code changes.
+
 
 :ref:`Current supported infra <installation>` (Kubernetes; AWS, GCP, Azure, OCI, Lambda Cloud, Fluidstack, RunPod, Cudo, Paperspace, Cloudflare, Samsung, IBM, VMware vSphere):
 
@@ -132,71 +147,71 @@ Read the research:
    :maxdepth: 1
    :caption: Getting Started
 
+   ../getting-started/key-concepts
    ../getting-started/installation
    ../getting-started/quickstart
-   ../examples/interactive-development
-   ../getting-started/tutorial
+   Example: AI Training <../getting-started/tutorial>
    ../sky-computing
 
+.. toctree::
+   :hidden:
+   :maxdepth: 1
+   :caption: Clusters
+
+   Getting Started <../examples/interactive-development>
+   ../reference/kubernetes/index
+   Using Existing Machines <../reservations/existing-machines>
+   ../reservations/reservations
+   SkyPilot Provisioner <../examples/auto-failover>
+   ../reference/auto-stop
 
 .. toctree::
    :hidden:
    :maxdepth: 1
-   :caption: Running Jobs
+   :caption: Jobs
 
+   Cluster Jobs <../reference/job-queue>
    ../examples/managed-jobs
-   ../reference/job-queue
-   ../examples/auto-failover
-   ../running-jobs/distributed-jobs
+   Multi-Node Jobs <../running-jobs/distributed-jobs>
    ../running-jobs/many-jobs
 
-.. toctree::
-   :hidden:
-   :maxdepth: 1
-   :caption: Reserved & Existing Clusters
-
-   ../reservations/reservations
-   Using Existing Machines <../reservations/existing-machines>
-   ../reference/kubernetes/index
 
 .. toctree::
    :hidden:
    :maxdepth: 1
-   :caption: SkyServe: Model Serving
+   :caption: Serving
 
-   ../serving/sky-serve
+   Getting Started <../serving/sky-serve>
    ../serving/user-guides
-   ../serving/service-yaml-spec
+
+.. .. toctree::
+..    :hidden:
+..    :maxdepth: 1
+..    :caption: Cost Optimization
+
+..    Managed Spot Jobs <../examples/spot-jobs>
+
+.. ..    ../reference/benchmark/index
 
 .. toctree::
    :hidden:
    :maxdepth: 1
-   :caption: Cutting Cloud Costs
+   :caption: Data
 
-   Managed Spot Jobs <../examples/spot-jobs>
-   ../reference/auto-stop
-   ../reference/benchmark/index
-
-.. toctree::
-   :hidden:
-   :maxdepth: 1
-   :caption: Using Data
-
-   ../examples/syncing-code-artifacts
    ../reference/storage
+   ../examples/syncing-code-artifacts
 
 .. toctree::
    :hidden:
    :maxdepth: 1
    :caption: User Guides
 
+   Docker Containers <../examples/docker-containers>
    ../running-jobs/environment-variables
-   ../examples/docker-containers
-   ../examples/ports
    ../reference/tpu
+   ../examples/ports
    ../reference/logging
    ../reference/faq
-   SkyPilot vs. Other Systems <../reference/comparison>
 
 
 .. toctree::
@@ -207,16 +222,17 @@ Read the research:
    ../cloud-setup/cloud-permissions/index
    ../cloud-setup/cloud-auth
    ../cloud-setup/quota
-   ../cloud-setup/policy
+   Admin Policies <../cloud-setup/policy>
 
 .. toctree::
    :hidden:
    :maxdepth: 1
    :caption: References
 
-   ../reference/yaml-spec
-   ../reference/cli
-   ../reference/api
+   Task YAML <../reference/yaml-spec>
+   ../serving/service-yaml-spec
+   SkyPilot CLI <../reference/cli>
+   SkyPilot Python API <../reference/api>
    ../reference/config
    ../developers/index
 

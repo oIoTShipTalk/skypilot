@@ -103,3 +103,4 @@ Table of Contents
    Getting Started <kubernetes-getting-started>
    kubernetes-setup
    kubernetes-troubleshooting
+   SkyPilot vs. Vanilla Kubernetes <../../reference/comparison>
